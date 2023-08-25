@@ -40,6 +40,8 @@
   --color-disable-fixed: #212529;
   --color-actived-fixed: #2b2f33;
   --color-white-fixed: #ffffff;
+
+ 
 }
 
 body {
@@ -47,4 +49,5 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-grey-9);
+  color: var(--color-grey-0);
 }
