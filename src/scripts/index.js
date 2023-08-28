@@ -1,5 +1,6 @@
 /* Desenvolva sua lógica aqui ... */
 import { products, categories } from "./productsData.js";
+import {darkMode} from "./theme.js"
 
 const createCard = (product) => {
   const createCardLi = document.createElement("li")
@@ -13,9 +14,10 @@ const createCard = (product) => {
   createCardLi.classList.add("list__product")
   createCardH2.classList.add("price__h2")
   createCardSpan.classList.add("price__span")
-
   createCardbutton.classList.add("price__button")
+
   createCardP1.innerText = `${product.band} ${product.year}`
+
   createCardH2.innerText = product.title
   createCardP2.innerText = `R$ ${product.price}.00`
   createCardbutton.innerText = "Comprar"
@@ -36,9 +38,11 @@ const createCard = (product) => {
 
 const renderbutton = (categories) => {
   const listRender = document.querySelector(".filter__select")
+
   categories.forEach(category => {
     const libutton = document.createElement("li")
     const buttonCategory = document.createElement("button")
+
     buttonCategory.innerText = category
 
     buttonCategory.classList.add("button__category")
@@ -89,10 +93,10 @@ const eventButton = (categoryArray, productArray) => {
         filteredArray = productArray.filter(product => product.category === categoryIndex && product.price >= inputValue)
       }
 
-      rendercards(filteredArray, cardsContainer);
+      rendercards(filteredArray, cardsContainer)
 
-    });
-  });
+    })
+  })
 
   input.addEventListener("input", (event) => {
     inputValue = event.target.value;
@@ -106,10 +110,8 @@ const eventButton = (categoryArray, productArray) => {
     valueFilter.innerText = `Até R$ ${input.value}`
 
     rendercards(filteredArray, cardsContainer)
-    // Chama a função para renderizar os cards
+
   });
-
 }
-
-
 eventButton(categories, products)
+darkMode()

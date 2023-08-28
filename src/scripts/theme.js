@@ -1,4 +1,4 @@
-const darkMode = () => {
+ export const darkMode = () => {
     const buttonDark = document.querySelector(".dark__mode")
     buttonDark.innerHTML = ""
     const htmlTag = document.querySelector("html")
@@ -40,4 +40,4 @@ htmlTag.classList.remove("dark-mode")
 
     })
 }
-darkMode()
+

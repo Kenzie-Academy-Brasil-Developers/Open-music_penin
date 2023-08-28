@@ -4,9 +4,6 @@ body {
 
 }
 
-.list__albuns {
-    padding: 50px;
-}
 
 .header__container {
 
@@ -132,11 +129,11 @@ body {
 
 }
 
-#filter__imput input {
+/* #filter__imput input {
     width: auto;
     height: 100px;
 
-}
+} */
 
 
 .render__cards {
@@ -150,11 +147,14 @@ body {
 }
 
 
+.list__albuns {
+    padding: 50px;
+}
 
 
 .list__product {
-    width: 308;
-    height: 259;
+    width: 308px;
+    height: 259px;
     background-color: var(--color-grey-8);
     border-radius: var(--radius-1);
     display: flex;
