@@ -88,9 +88,9 @@ const eventButton = (categoryArray, productArray) => {
       categoryIndex = index
 
       if (categoryIndex === 0) {
-        filteredArray = productArray.filter(product => product.price >= inputValue)
+        filteredArray = productArray.filter(product => product.price <= inputValue)
       } else {
-        filteredArray = productArray.filter(product => product.category === categoryIndex && product.price >= inputValue)
+        filteredArray = productArray.filter(product => product.category === categoryIndex && product.price <= inputValue)
       }
 
       rendercards(filteredArray, cardsContainer)
@@ -103,9 +103,9 @@ const eventButton = (categoryArray, productArray) => {
     valueFilter.innerText = `Até R$ ${Number(inputValue).toFixed(2)}`
 
     if (categoryIndex === 0) {
-      filteredArray = productArray.filter(product => product.price >= inputValue)
+      filteredArray = productArray.filter(product => product.price <= inputValue)
     } else {
-      filteredArray = productArray.filter(product => product.category === categoryIndex && product.price >= inputValue)
+      filteredArray = productArray.filter(product => product.category === categoryIndex && product.price <= inputValue)
     }
     valueFilter.innerText = `Até R$ ${input.value}`
 
